@@ -8,6 +8,6 @@ package light_off;
  *
  * @author emeri
  */
-public class GrilleDeCellules {
+public class GrilleDeJeu {
     
 }
