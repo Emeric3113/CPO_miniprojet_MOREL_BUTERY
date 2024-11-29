@@ -4,10 +4,23 @@
  */
 package light_off;
 
+
 /**
  *
  * @author emeri
  */
 public class Partie {
-    
+        private GrilleDeJeu grille;
+    private int nbCoups;
+
+    public Partie(int nbLignes, int nbColonnes) {
+        this.grille = new GrilleDeJeu(nbLignes, nbColonnes);
+        this.nbCoups = 0;
+    }
+
+    public void initialiserPartie(int nbToursMelange) {
+        this.grille.melangerMatriceAleatoirement(nbToursMelange);
+    }
+
 }
+
