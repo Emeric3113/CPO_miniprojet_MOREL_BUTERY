@@ -4,6 +4,8 @@
  */
 package light_off;
 
+import java.util.Scanner;
+
 
 /**
  *
@@ -21,6 +23,5 @@ public class Partie {
     public void initialiserPartie(int nbToursMelange) {
         this.grille.melangerMatriceAleatoirement(nbToursMelange);
     }
-
+    
 }
-
