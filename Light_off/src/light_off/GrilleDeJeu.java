@@ -51,6 +51,7 @@ public class GrilleDeJeu {
         if (ligne < nbLignes - 1) matriceCellules[ligne + 1][colonne].activerCellule(); // Bas
         if (colonne > 0) matriceCellules[ligne][colonne - 1].activerCellule(); // Gauche
         if (colonne < nbColonnes - 1) matriceCellules[ligne][colonne + 1].activerCellule(); // Droite
+        matriceCellules[ligne][colonne].activerCellule();
     }
 
     // Vérifie si toutes les cellules sont éteintes
