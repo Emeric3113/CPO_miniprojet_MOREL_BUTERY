@@ -25,6 +25,15 @@ public class GrilleDeJeu {
             }
         }
     }
+    
+    public int getNbLignes() {
+        return this.nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return this.nbColonnes;
+    }
+
 
     // Mélange la grille aléatoirement en activant des cellules adjacentes
     public void melangerMatriceAleatoirement(int nbTours) {
