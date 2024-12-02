@@ -24,6 +24,7 @@ public class PartieGUI extends javax.swing.JFrame {
      * Creates new form PartieGUI
      */
     public PartieGUI() {
+        initComponents();
         partie = new Partie(5, 5); // Crée une grille 5x5
         partie.initialiserPartie(10); // Mélange aléatoire
 
@@ -80,7 +81,7 @@ public class PartieGUI extends javax.swing.JFrame {
             }
         }
     }
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
