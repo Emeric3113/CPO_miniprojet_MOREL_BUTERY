@@ -10,6 +10,10 @@ import java.util.Random;
  *
  * @author emeri
  */
+
+// GrilleDeJeu.java
+import java.util.Random;
+
 public class GrilleDeJeu {
     private CelluleLumineuse[][] matriceCellules;
     private int nbLignes;
@@ -25,17 +29,7 @@ public class GrilleDeJeu {
             }
         }
     }
-    
-    public int getNbLignes() {
-        return this.nbLignes;
-    }
 
-    public int getNbColonnes() {
-        return this.nbColonnes;
-    }
-
-
-    // Mélange la grille aléatoirement en activant des cellules adjacentes
     public void melangerMatriceAleatoirement(int nbTours) {
         Random random = new Random();
         for (int t = 0; t < nbTours; t++) {
@@ -45,7 +39,6 @@ public class GrilleDeJeu {
         }
     }
 
-    // Active les cellules adjacentes (haut, bas, gauche, droite)
     public void activerCellulesAdjacentes(int ligne, int colonne) {
         if (ligne > 0) matriceCellules[ligne - 1][colonne].activerCellule(); // Haut
         if (ligne < nbLignes - 1) matriceCellules[ligne + 1][colonne].activerCellule(); // Bas
@@ -54,11 +47,10 @@ public class GrilleDeJeu {
         matriceCellules[ligne][colonne].activerCellule();
     }
 
-    // Vérifie si toutes les cellules sont éteintes
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
-                if (!matriceCellules[i][j].estEteint()) {
+                if (!matriceCellules[i][j].estEteinte()) {
                     return false;
                 }
             }
@@ -66,12 +58,10 @@ public class GrilleDeJeu {
         return true;
     }
 
-    // Affiche l'état de la cellule
     public boolean getEtatCellule(int ligne, int colonne) {
-        return !matriceCellules[ligne][colonne].estEteint();
+        return !matriceCellules[ligne][colonne].estEteinte();
     }
 
-    // Affiche la grille de manière lisible
     public void afficherGrille() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -79,5 +69,14 @@ public class GrilleDeJeu {
             }
             System.out.println();
         }
+    }
+
+    // Méthodes pour obtenir les dimensions de la grille
+    public int getNbLignes() {
+        return this.nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return this.nbColonnes;
     }
 }
