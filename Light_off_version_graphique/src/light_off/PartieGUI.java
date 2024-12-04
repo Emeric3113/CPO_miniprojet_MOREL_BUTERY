@@ -20,8 +20,6 @@ public class PartieGUI extends javax.swing.JFrame {
     private JPanel panel;
     private JButton[][] buttons;
     private JLabel compteurCoups;
-    private char Couleur_allume;
-    private char Couleur_eteint;
     /**
      * Creates new form PartieGUI
      */
