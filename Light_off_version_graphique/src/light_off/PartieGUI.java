@@ -58,6 +58,11 @@ public class PartieGUI extends javax.swing.JFrame {
         compteurCoups = new JLabel("Coups : 0");
         frame.add(compteurCoups, BorderLayout.NORTH);
         frame.add(panel, BorderLayout.CENTER);
+        
+        JButton boutonAccueil = new JButton("écran d'accueil");
+        boutonAccueil.setFont(new Font("Arial", Font.PLAIN, 16));
+        boutonAccueil.addActionListener(e -> System.out.println("Bouton Revenir à l'écran d'accueil cliqué")); // Action temporaire
+        frame.add(boutonAccueil, BorderLayout.SOUTH);
 
         frame.setVisible(true);
     }
