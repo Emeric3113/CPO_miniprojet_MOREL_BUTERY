@@ -14,6 +14,10 @@ public class Light_off {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new PartieGUI(); // Lance l'interface graphique
-    }
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new Menu().setVisible(true);
+            }
+        });}
 }

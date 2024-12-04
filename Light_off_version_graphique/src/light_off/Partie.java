@@ -19,6 +19,10 @@ public class Partie {
         this.nbCoups = 0;
     }
 
+    Partie() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public void initialiserPartie(int nbToursMelange) {
         this.grille.melangerMatriceAleatoirement(nbToursMelange);
     }
@@ -34,5 +38,9 @@ public class Partie {
 
     public GrilleDeJeu getGrille() {
         return grille;
+    }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
