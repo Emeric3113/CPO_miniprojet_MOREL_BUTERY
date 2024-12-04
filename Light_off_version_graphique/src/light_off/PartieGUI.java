@@ -20,6 +20,8 @@ public class PartieGUI extends javax.swing.JFrame {
     private JPanel panel;
     private JButton[][] buttons;
     private JLabel compteurCoups;
+    private char Couleur_allume;
+    private char Couleur_eteint;
     /**
      * Creates new form PartieGUI
      */
@@ -40,7 +42,7 @@ public class PartieGUI extends javax.swing.JFrame {
             for (int j = 0; j < 5; j++) {
                 buttons[i][j] = new JButton(partie.getGrille().getEtatCellule(i, j) ? "X" : "O");
                 buttons[i][j].setFont(new Font("Arial", Font.PLAIN, 20));
-                buttons[i][j].setBackground(partie.getGrille().getEtatCellule(i, j) ? Color.YELLOW : Color.GRAY);
+                buttons[i][j].setBackground(partie.getGrille().getEtatCellule(i, j) ? Color.GREEN : Color.RED);
                 final int ligne = i;
                 final int colonne = j;
                 buttons[i][j].addActionListener(new ActionListener() {
@@ -80,7 +82,7 @@ public class PartieGUI extends javax.swing.JFrame {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 buttons[i][j].setText(partie.getGrille().getEtatCellule(i, j) ? "X" : "O");
-                buttons[i][j].setBackground(partie.getGrille().getEtatCellule(i, j) ? Color.YELLOW : Color.GRAY);
+                buttons[i][j].setBackground(partie.getGrille().getEtatCellule(i, j) ? Color.GREEN : Color.RED);
             }
         }
     }
