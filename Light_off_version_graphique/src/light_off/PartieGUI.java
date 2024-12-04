@@ -68,14 +68,24 @@ public class PartieGUI extends javax.swing.JFrame {
         refreshGrid();
         
         if (partie.getGrille().cellulesToutesAllumee()) {
-            compteurCoups.setText("Bravo ! Jeu terminé en " + partie.getNbCoups() + " coups.");
-        } 
-        if (partie.getGrille().cellulesToutesEteintes()) {
-            compteurCoups.setText("Bravo ! Jeu terminé en " + partie.getNbCoups() + " coups.");
+            compteurCoups.setText("Bravo ! Vous avez allumé toutes les lumières en " + partie.getNbCoups() + " coups.");
+            desactiverBoutons(); // Désactive les boutons une fois la partie gagnée
+        } else if (partie.getGrille().cellulesToutesEteintes()) {
+            compteurCoups.setText("Bravo ! Vous avez éteint toutes les lumières en " + partie.getNbCoups() + " coups.");
+            desactiverBoutons(); // Désactive les boutons une fois la partie gagnée
         } else {
             compteurCoups.setText("Coups : " + partie.getNbCoups());
         }
     }
+    
+    private void desactiverBoutons() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                buttons[i][j].setEnabled(false); // Désactive chaque bouton
+            }
+        }
+    }
+
 
     private void refreshGrid() {
         // Met à jour les boutons de la grille

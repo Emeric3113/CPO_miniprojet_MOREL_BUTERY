@@ -60,8 +60,8 @@ public class GrilleDeJeu {
         public boolean cellulesToutesAllumee() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
-                if (!matriceCellules[i][j].estAllumee()) {
-                    return true;
+                if (matriceCellules[i][j].estEteinte()) {
+                    return false;
                 }
             }
         }
