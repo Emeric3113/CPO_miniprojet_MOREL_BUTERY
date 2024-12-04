@@ -64,7 +64,10 @@ public class PartieGUI extends javax.swing.JFrame {
         // Applique les changements de cellules adjacentes
         partie.jouerCoup(ligne, colonne);
         refreshGrid();
-
+        
+        if (partie.getGrille().cellulesToutesAllumee()) {
+            compteurCoups.setText("Bravo ! Jeu terminé en " + partie.getNbCoups() + " coups.");
+        } 
         if (partie.getGrille().cellulesToutesEteintes()) {
             compteurCoups.setText("Bravo ! Jeu terminé en " + partie.getNbCoups() + " coups.");
         } else {

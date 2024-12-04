@@ -24,6 +24,10 @@ public class CelluleLumineuse {
     public boolean estEteinte() {
         return !this.etat;
     }
+        // Vérifie si la cellule est Allumée
+    public boolean estAllumee() {
+        return this.etat;
+    }
 
     @Override
     public String toString() {

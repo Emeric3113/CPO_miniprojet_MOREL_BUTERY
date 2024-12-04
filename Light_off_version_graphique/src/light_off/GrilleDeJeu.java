@@ -57,10 +57,21 @@ public class GrilleDeJeu {
         }
         return true;
     }
+        public boolean cellulesToutesAllumee() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                if (!matriceCellules[i][j].estAllumee()) {
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
 
     public boolean getEtatCellule(int ligne, int colonne) {
         return !matriceCellules[ligne][colonne].estEteinte();
     }
+    
 
     public void afficherGrille() {
         for (int i = 0; i < nbLignes; i++) {
