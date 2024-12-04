@@ -59,12 +59,19 @@ public class PartieGUI extends javax.swing.JFrame {
         
         // Ajouter une zone pour les boutons en bas
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(1, 2)); // Deux boutons côte à côte
+        bottomPanel.setLayout(new GridLayout(1, 3)); // Deux boutons côte à côte
         
-        JButton boutonAccueil = new JButton("écran d'accueil");
+        // Bouton pour revenir à l'acceil
+        JButton boutonAccueil = new JButton("Accueil");
         boutonAccueil.setFont(new Font("Arial", Font.PLAIN, 16));
         boutonAccueil.addActionListener(e -> System.out.println("Bouton Revenir à l'écran d'accueil cliqué")); // Action temporaire
         bottomPanel.add(boutonAccueil);
+        
+        // Bouton pour commencer
+        JButton boutonRejouer = new JButton("Rejouer");
+        boutonRejouer.setFont(new Font("Arial", Font.PLAIN, 16));
+        boutonRejouer.addActionListener(e -> recommencerPartie());
+        bottomPanel.add(boutonRejouer);
         
         // Bouton pour quitter le jeu
         JButton boutonQuitter = new JButton("Quitter le jeu");
@@ -101,6 +108,15 @@ public class PartieGUI extends javax.swing.JFrame {
         }
     }
 
+    private void recommencerPartie() {
+        // Réinitialiser la partie
+        partie = new Partie(5, 5);
+        partie.initialiserPartie(10);
+
+        // Réinitialiser l'affichage
+        compteurCoups.setText("Coups : 0");
+        refreshGrid();
+    }
 
     private void refreshGrid() {
         // Met à jour les boutons de la grille
