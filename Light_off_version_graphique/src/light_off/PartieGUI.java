@@ -59,11 +59,23 @@ public class PartieGUI extends javax.swing.JFrame {
         frame.add(compteurCoups, BorderLayout.NORTH);
         frame.add(panel, BorderLayout.CENTER);
         
+        // Ajouter une zone pour les boutons en bas
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new GridLayout(1, 2)); // Deux boutons côte à côte
+        
         JButton boutonAccueil = new JButton("écran d'accueil");
         boutonAccueil.setFont(new Font("Arial", Font.PLAIN, 16));
         boutonAccueil.addActionListener(e -> System.out.println("Bouton Revenir à l'écran d'accueil cliqué")); // Action temporaire
-        frame.add(boutonAccueil, BorderLayout.SOUTH);
+        bottomPanel.add(boutonAccueil);
+        
+        // Bouton pour quitter le jeu
+        JButton boutonQuitter = new JButton("Quitter le jeu");
+        boutonQuitter.setFont(new Font("Arial", Font.PLAIN, 16));
+        boutonQuitter.addActionListener(e -> System.exit(0)); // Ferme totalement l'application
+        bottomPanel.add(boutonQuitter);
 
+        frame.add(bottomPanel, BorderLayout.SOUTH);
+        
         frame.setVisible(true);
     }
 
