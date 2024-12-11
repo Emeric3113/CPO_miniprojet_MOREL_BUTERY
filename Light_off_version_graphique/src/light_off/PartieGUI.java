@@ -64,7 +64,12 @@ public class PartieGUI extends javax.swing.JFrame {
         // Bouton pour revenir à l'acceil
         JButton boutonAccueil = new JButton("Accueil");
         boutonAccueil.setFont(new Font("Arial", Font.PLAIN, 16));
-        boutonAccueil.addActionListener(e -> System.out.println("Bouton Revenir à l'écran d'accueil cliqué")); // Action temporaire
+        boutonAccueil.addActionListener(e -> {
+    // Créer une nouvelle instance de la classe Menu
+    Menu menu = new Menu();
+    menu.setVisible(true); // Affiche la fenêtre Menu
+    ((JFrame) SwingUtilities.getWindowAncestor(boutonAccueil)).dispose(); // Ferme la fenêtre actuelle
+});
         bottomPanel.add(boutonAccueil);
         
         // Bouton pour commencer
