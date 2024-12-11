@@ -90,18 +90,17 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-new PartieGUI();
-this.dispose();
+        new PartieGUI();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // Afficher les règles dans une boîte de dialogue
         JOptionPane.showMessageDialog(this, 
             "Les règles du jeu sont les suivantes:\n"
-            + "1. Éteignez toutes les lumières.\n"
-            + "2. Cliquez sur les boutons pour basculer l'état des lumières.\n"
-            + "3. Bon jeu !", 
+            + "1. Éteignez ou allumez toutes les lumières.\n"
+            + "2. Cliquez sur les boutons pour basculer l'état de la lumière ainsi que celles adjacentes.\n"
+            + "3. Amusez vous !", 
             "Règles du jeu", 
             JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton2ActionPerformed
