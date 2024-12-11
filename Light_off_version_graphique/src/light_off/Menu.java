@@ -46,8 +46,18 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jButton2.setText("Règles");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Quitter");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,12 +90,11 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    new Partie().setVisible(true);  
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-                                     
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+new PartieGUI();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // Afficher les règles dans une boîte de dialogue
         JOptionPane.showMessageDialog(this, 
             "Les règles du jeu sont les suivantes:\n"
@@ -94,12 +103,13 @@ public class Menu extends javax.swing.JFrame {
             + "3. Bon jeu !", 
             "Règles du jeu", 
             JOptionPane.INFORMATION_MESSAGE);
-    }                                        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // Fermer l'application
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                // Fermer l'application
         System.exit(0);
-    }           
+    }//GEN-LAST:event_jButton3ActionPerformed
+           
     /**
      * @param args the command line arguments
      */
