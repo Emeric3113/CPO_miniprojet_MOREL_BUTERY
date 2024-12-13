@@ -60,7 +60,9 @@ public class PartieGUI extends javax.swing.JFrame {
         // Ajouter une zone pour les boutons en bas
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new GridLayout(1, 3, 10, 10)); // Trois boutons espacés
-        bottomPanel.setOpaque(false);
+        bottomPanel.setOpaque(true);
+        bottomPanel.setBackground(new Color(240,240,240));
+        
         
         // Bouton pour revenir à l'acceil
         JButton boutonAccueil = new JButton("Accueil");
