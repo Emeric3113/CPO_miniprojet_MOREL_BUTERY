@@ -59,7 +59,8 @@ public class PartieGUI extends javax.swing.JFrame {
         
         // Ajouter une zone pour les boutons en bas
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(1, 3)); // Deux boutons côte à côte
+        bottomPanel.setLayout(new GridLayout(1, 3, 10, 10)); // Trois boutons espacés
+        bottomPanel.setOpaque(false);
         
         // Bouton pour revenir à l'acceil
         JButton boutonAccueil = new JButton("Accueil");
@@ -79,7 +80,7 @@ public class PartieGUI extends javax.swing.JFrame {
         bottomPanel.add(boutonRejouer);
         
         // Bouton pour quitter le jeu
-        JButton boutonQuitter = new JButton("Quitter le jeu");
+        JButton boutonQuitter = new JButton("Quitter");
         boutonQuitter.setFont(new Font("Arial", Font.PLAIN, 16));
         boutonQuitter.addActionListener(e -> System.exit(0)); // Ferme totalement l'application
         bottomPanel.add(boutonQuitter);
