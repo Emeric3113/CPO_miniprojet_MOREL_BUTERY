@@ -112,6 +112,14 @@ public class PartieGUI extends javax.swing.JFrame {
             }
         }
     }
+    
+       private void activerBoutons() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                buttons[i][j].setEnabled(true); // Désactive chaque bouton
+            }
+        }
+    }
 
     private void recommencerPartie() {
         // Réinitialiser la partie
@@ -120,6 +128,9 @@ public class PartieGUI extends javax.swing.JFrame {
 
         // Réinitialiser l'affichage
         compteurCoups.setText("Coups : 0");
+        
+        // Réactiver les boutons
+        activerBoutons();
         refreshGrid();
     }
 
