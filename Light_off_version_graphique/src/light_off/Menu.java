@@ -31,7 +31,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.revalidate(); // Mettre à jour la disposition
         jPanel1.repaint();
         
-
+        setResizable(false); // Empêche le redimensionnement de la fenêtre
     }
 
     /**
@@ -51,6 +51,8 @@ public class Menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(418, 418));
+        setMinimumSize(new java.awt.Dimension(418, 418));
         setPreferredSize(new java.awt.Dimension(418, 418));
 
         jButton1.setText("Jouer");
