@@ -21,9 +21,8 @@ public class Menu extends javax.swing.JFrame {
      * Creates new form Menu
      */
     public Menu() {
+        
         initComponents();
-        
-        
         // Ajout du GIF dans le jPanel1
         ImageIcon gifIcon = new ImageIcon("src/Ampoule.gif"); // Remplacez par le chemin réel du GIF
         JLabel gifLabel = new JLabel(gifIcon);
@@ -53,7 +52,7 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(418, 418));
         setMinimumSize(new java.awt.Dimension(418, 418));
-        setPreferredSize(new java.awt.Dimension(418, 418));
+        setPreferredSize(new java.awt.Dimension(418, 400));
 
         jButton1.setText("Jouer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

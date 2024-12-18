@@ -11,6 +11,7 @@ package light_off;
  * @author emeri
  */
 public class Partie {
+    // Paramètres de la fenêtre
     private GrilleDeJeu grille;
     private int nbCoups;
 

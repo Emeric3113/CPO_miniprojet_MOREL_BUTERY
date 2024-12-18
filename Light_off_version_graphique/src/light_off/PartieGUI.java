@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PartieGUI extends javax.swing.JFrame {
+    // Paramètres de la fenêtre
     private Partie partie;
     private JFrame frame;
     private JPanel panel;
